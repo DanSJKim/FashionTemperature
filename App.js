@@ -1,6 +1,6 @@
 import { Provider } from 'react-redux';
 import React from 'react';
-import reducer from './src/reducers/index';
+
 import {
   SafeAreaView,
   StyleSheet,
@@ -17,9 +17,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-
-const store = createStore(reducer);
-
+import store from './src/store/store';
 const App: () => React$Node = () => {
   return (
     <>
