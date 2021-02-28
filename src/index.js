@@ -10,24 +10,21 @@ import store from './store/store';
 const Stack = createStackNavigator();
 
 const App = () => {
-    const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
-    if (isLoading) {
-        return <Loading />;
-    }
+  if (isLoading) {
+    return <Loading />;
+  }
 
-    return (
-        <Provider store={store}>
-            <NavigationContainer>
-                <Stack.Navigator>
-                    <Stack.Screen
-                        name="메인 화면"
-                        component={Main}
-                    />
-                </Stack.Navigator>
-            </NavigationContainer>
-        </Provider>
-    );
+  return (
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="메인 화면" component={Main} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
+  );
 };
 
 export default App;
