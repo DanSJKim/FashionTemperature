@@ -1,8 +1,9 @@
 import createSagaMiddleware from 'redux-saga';
 import { createStore, applyMiddleware } from 'redux';
 
-import reducer from './src/reducers/index';
-import rootSaga from './src/saga';
+import reducer from '../reducers';
+// eslint-disable-next-line import/no-named-as-default
+import rootSaga from '../saga';
 
 const sagaMiddleware = createSagaMiddleware();
 
