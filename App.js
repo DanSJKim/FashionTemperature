@@ -17,7 +17,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import store from './src/store/store';
+import store from './src/store/store.js';
 const App: () => React$Node = () => {
   return (
     <>
